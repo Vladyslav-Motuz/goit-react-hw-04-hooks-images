@@ -5,18 +5,16 @@ import ImageGallery from './components/ImageGallery/ImageGallery';
 import './App.css';
 
 function App() {
-  const [searchName, setSearchName] = useState("");
-  const [pageStart, setPageStart] = useState(1);
+  const [searchName, setSearchName] = useState("");  
 
-  const searchForm = (searchName, page) => {
-    setSearchName(searchName);   
-    setPageStart(page)
+  const searchForm = (searchName) => {
+    setSearchName(searchName);  
   };
 
   return (
     <div className="App">
       <Searchbar onSubmit={searchForm} />
-      <ImageGallery searchName={searchName} pageStart={pageStart}/>
+      <ImageGallery searchName={searchName}/>
     </div>
   );
 };

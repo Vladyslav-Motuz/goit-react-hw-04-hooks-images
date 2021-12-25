@@ -14,7 +14,7 @@ function Searchbar({onSubmit}) {
             alert("Введите запрос")
             return
         }        
-        onSubmit(searchName);
+        onSubmit(searchName);        
         resetForm();
     };
 
